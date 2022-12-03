@@ -51,7 +51,6 @@ While this example listed the entries in chronological order, your entries are i
 What is the ID of the guard you chose multiplied by the minute you chose? (In the above example, the answer would be 10 * 24 = 240.)
 """
 from datetime import datetime
-from tabulate import tabulate
 from functools import reduce
 
 with open('./inputs/0401.txt') as f:
