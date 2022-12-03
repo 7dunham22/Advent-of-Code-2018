@@ -26,12 +26,12 @@ def fill(claim):
   [start, dimensions] = details.split(': ')
   [startCol, startRow] = start.split(',')
   [width, length] = dimensions.split('x')
-  startCol, startRow, width, length = [int(i) for i in [startCol, startRow, width, length]]
+  id, startCol, startRow, width, length = [int(i) for i in [id, startCol, startRow, width, length]]
   for r in range(startRow, startRow+length):
     for c in range(startCol, startCol+width):
       if fabric[r][c] != 0:
-        hasOverlap[int(id)-1] = True
-        hasOverlap[int(fabric[r][c])-1] = True
+        hasOverlap[id-1] = True
+        hasOverlap[fabric[r][c]-1] = True
       else:
         fabric[r][c] = id
 
