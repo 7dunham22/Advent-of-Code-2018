@@ -31,9 +31,6 @@ polymers = list(data)
 res = [polymers.pop()]
 
 while len(polymers) > 0:
-  # print('polymers: ', polymers)
-  # print('res: ', res)
-  # print('====')
   prev = polymers.pop()
   if prev.lower() == res[-1].lower() and ((prev.islower() and res[-1].isupper()) or (prev.isupper() and res[-1].islower())):
     res.pop()
